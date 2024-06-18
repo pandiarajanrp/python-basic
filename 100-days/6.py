@@ -24,3 +24,10 @@ while(left_index < right_index):
   print(f"Right : {right_index}")
 
 print(sum)
+
+
+strings = ["pandi", "raja", "john", "smith"]
+
+filtered = filter(lambda x: len(x) > 4, strings)
+
+print(list(filtered))
