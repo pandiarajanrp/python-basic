@@ -12,7 +12,8 @@ print(student["name"])
 # print(student['phone']) # throws KeyError
 if "phone" in student:
     print(student["phone"])
-print(student.get("phone"))
+
+print(student.get("phone", "default value"))
 
 # set values
 print("**** set value ******")
@@ -33,10 +34,18 @@ print("**** delete ******")
 del student["address"]
 print(student)
 
+#delete by key
+student.pop("age")
+
+#delete last item
+student.popitem()
+print(student)
+
 # clone
 print("**** clone ******")
 new_student1 = dict(student)
 new_student2 = student.copy()
+
 student["name"] = "Pandi"
 print(new_student1)
 print(new_student2)
@@ -54,3 +63,12 @@ for value in student.values():
 for key, value in student.items():
   print("key ::: " + key)
   print("value ::: " + str(value))
+
+
+#delete all
+student.clear()
+
+#create with keys array
+people = ["john", "smith", "loosy"]
+people_dist = dict.fromkeys(people, "initial value")
+print(people_dist)
