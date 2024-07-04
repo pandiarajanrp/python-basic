@@ -8,7 +8,7 @@ same_number = [0] * 100
 combined = letters + same_number
 
 #iterable
-numbers = list(range(20))
+numbers = list(range(20)) # [0,1,.....,19]
 str_list = list("Hello World")
 
 print(letters)
@@ -20,7 +20,7 @@ print(str_list)
 
 #accessing
 print(letters[0]) #a
-print(letters[-1]) #c
+print(letters[-1]) #f
 
 #set value
 letters[0] = 'A'
@@ -80,9 +80,10 @@ print(numbers)
 
 
 print("----- Find ------")
-
 print(letters.index("b"))
 # print(letters.index("x")) #this will throw ValueError instead use by count or in operator
+
 print(letters.count("x"))
+# type checking
 if "x" in letters:
   print("X is in List")

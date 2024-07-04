@@ -4,15 +4,17 @@ new_student = student  # copy as reference
 
 student["adult"] = True
 
-print(new_student)
+print(new_student["adult"]) # True
 
 # accessing key
 print("**** access ******")
 print(student["name"])
-# print(student['phone']) # throws KeyError
+
+# type check print(student['phone']) # throws KeyError
 if "phone" in student:
     print(student["phone"])
 
+# without key error
 print(student.get("phone", "default value"))
 
 # set values
